@@ -1,3 +1,19 @@
+.Login{
+  width: 20%;
+  height: 40%;
+}
 .label{
   color: #003494 !important;
 }
+.button{
+
+  margin-top: 15px !important;
+  background-color: #002a76 !important;
+  color: white !important;
+}
+/* .ui.dimmer .ui.loader:before{
+  border-color: aquamarine;
+}
+.ui.dimmer .ui.loader:after{
+  color: red;
+} */
