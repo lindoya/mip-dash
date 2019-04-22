@@ -1,19 +1,27 @@
 .Login{
-  width: 20%;
+  width: 40%;
   height: 40%;
 }
 .label{
   color: #003494 !important;
+  background-color: #e8e8e8 !important;
+}
+
+.labelClass{
+  width: 85px !important;
 }
 .button{
 
   margin-top: 15px !important;
-  background-color: #002a76 !important;
-  color: white !important;
+  background-color: #e8e8e8 !important;
+  color: #003494 !important;
 }
-/* .ui.dimmer .ui.loader:before{
-  border-color: aquamarine;
+.button:hover{
+  margin-top: 15px !important;
+  background-color: #003494 !important;
+  color: #e8e8e8 !important;
 }
-.ui.dimmer .ui.loader:after{
-  color: red;
-} */
+
+.form {
+  margin-top: 5%;
+}
