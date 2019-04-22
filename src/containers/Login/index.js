@@ -1,27 +1,35 @@
 import React, { Component } from 'react'
 import './index.css'
-import { Button, Form, FormField } from 'semantic-ui-react'
-import { Dimmer, Loader, Image, Segment } from 'semantic-ui-react'
+import { Button, Form, Label } from 'semantic-ui-react'
+import { Input, Image } from 'semantic-ui-react'
 
 
 export default class Login extends Component {
   render() {
-    return (
+    return (      
       <div className='Login'>
+      <div>
+        <img src='logo.png' />
+      </div>
+
         <Form>
-          <FormField>
-            <label className='label'>Username:</label>
-            <input placeholder='username' />
-          </FormField>
-          <FormField>
-            <label className='label'>Password:</label>
-            <input placeholder='password' />
-          </FormField>
+          <div className='form'>
+            <Input labelPosition='left corner' type='text'>
+              <Label className='labelClass'>Username</Label>
+              <Input icon='users' iconPosition='left' placeholder='username' />
+            </Input>
+            </div>
+            <div className='form'>
+            <Input labelPosition='left corner'>
+              <Label className='labelClass'>Password</Label>
+              <Input icon='unlock alternate' iconPosition='left' type='password' placeholder='password' />
+            </Input>
+            </div>
+            {/* <Input label='Username' icon='users' iconPosition='left' placeholder='username' /> */}
+            {/* <label className='label'>Password:</label>
+            <Input icon='unlock alternate' iconPosition='left' placeholder='password' /> */}
         </Form>
-        <Button className='button'>Salvar</Button>
-          {/* <Dimmer active >
-            <Loader className = 'loading'  size='massive'>Loading</Loader>
-          </Dimmer> */}
+        <Button className='button'>Login</Button>
       </div>
     )
   }
