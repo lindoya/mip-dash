@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SideMenu from './containers/SideMenu'
 import './App.css';
+import SearchBar from './components/SearchBar'
 
 class App extends Component {
 

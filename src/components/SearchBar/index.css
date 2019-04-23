@@ -1,0 +1,14 @@
+.div-search{
+}
+.card-search{
+  padding: 20px !important;
+  width: 800px !important;
+}
+.ui.input>input {
+  border-radius: 7px !important;
+  width: 600px !important;
+}
+.teste2{
+  display: flex !important;
+  justify-content: space-between !important;
+}

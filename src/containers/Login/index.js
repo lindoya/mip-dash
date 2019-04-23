@@ -1,37 +1,35 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react'
 import './index.css'
-import { Button, Form, Label } from 'semantic-ui-react'
-import { Input, Image } from 'semantic-ui-react'
+import ButtonDefault from '../../components/Button'
+import { Form, Label } from 'semantic-ui-react'
+import { Input } from 'semantic-ui-react'
 
 
-export default class Login extends Component {
+class Login extends Component {
   render() {
-    return (      
+    return (
       <div className='Login'>
-      <div>
-        <img src='logo.png' />
-      </div>
-
+        <img src = "realponto.jpg"/>
         <Form>
           <div className='form'>
             <Input labelPosition='left corner' type='text'>
               <Label className='labelClass'>Username</Label>
-              <Input icon='users' iconPosition='left' placeholder='username' />
+              <Input className='inputClass' icon='users' iconPosition='left' placeholder='username' />
             </Input>
-            </div>
-            <div className='form'>
+          </div>
+          <div className='form'>
             <Input labelPosition='left corner'>
               <Label className='labelClass'>Password</Label>
-              <Input icon='unlock alternate' iconPosition='left' type='password' placeholder='password' />
+              <Input className='inputClass' icon='unlock alternate' iconPosition='left' type='password' placeholder='password' />
             </Input>
-            </div>
-            {/* <Input label='Username' icon='users' iconPosition='left' placeholder='username' /> */}
-            {/* <label className='label'>Password:</label>
-            <Input icon='unlock alternate' iconPosition='left' placeholder='password' /> */}
+          </div>
         </Form>
-        <Button className='button'>Login</Button>
+        <ButtonDefault className='button' name = 'Login'/>
       </div>
     )
   }
 }
 
+
+export default Login
