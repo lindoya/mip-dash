@@ -1,20 +1,26 @@
-import React, { Component } from 'react';
-import SideMenu from './containers/SideMenu'
+import React from 'react';
+import { applyMiddleware, createStore } from 'redux'
+import { Provider } from 'react-redux'
+
+import promise from 'redux-promise'
+import multi from 'redux-multi'
+import thunk from 'redux-thunk'
+
+
+import reducers from './store/reducers'
+import Routes from './routes'
+
+
 import './App.css';
-import CardDefault from './components/Card'
+
+const store = applyMiddleware(thunk, multi, promise)(createStore)(reducers)
 
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <SideMenu username='Guilherme' active='Monitoramento' />
-        <CardDefault />
-      </div>
-    );
-  }
-}
-
-export default App;
+const App = () => (
+  <Provider store={store}>
+    <Routes />
+  </Provider>
+)
+export default App
 
 // Paleta #0144BF #003494 #002A76 #002059 #001336
