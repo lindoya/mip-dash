@@ -1,5 +1,5 @@
-.Login{
-  width: 40%;
+.FormNewUser{
+  width: 45%;
   height: 55%;
 }
 .label{
@@ -17,6 +17,8 @@
   margin-top: 5%;
 }
 .inputClass input{
+  outline: none !important;
+  width: 270px !important;
   border-top-left-radius:0px !important; 
   border-bottom-left-radius:0px !important; 
   border-top-right-radius:7px !important; 
