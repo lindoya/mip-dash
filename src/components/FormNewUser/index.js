@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './index.css'
-import { Form, Input, Label } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 import ButtonDefault from '../Button'
+import InputDefault from '../Input'
 
 class FormNewUser extends Component {
   render() {
@@ -9,22 +10,13 @@ class FormNewUser extends Component {
       <div className = 'FormNewUser'>
         <Form>
           <div className='form'>
-            <Input labelPosition = 'left corner'>
-              <Label className = 'labelClass'> Name </Label>
-              <Input className = 'inputClass' type = 'text' placeholder = 'complete name' />
-            </Input>
+            <InputDefault label='Nome' input='nome completo'/>
           </div>
           <div className='form'>
-            <Input labelPosition = 'left corner'>
-              <Label className = 'labelClass'>Email</Label>
-              <Input className = 'inputClass' type = 'email' placeholder = 'email@email.com' />
-            </Input>
+            <InputDefault label='Email' input='email@email.com'/>
           </div>
-        <div className='form'>
-            <Input labelPosition = 'left corner' type = 'text'>
-              <Label className = 'labelClass'> Username </Label>
-              <Input className = 'inputClass' placeholder = 'username' />
-            </Input>
+          <div className='form'>
+            <InputDefault label='Username' input='username'/>
           </div>
           <ButtonDefault className = 'buttonNewUSer' type = 'submit' name = 'Salvar'/>
         </Form>

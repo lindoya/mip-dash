@@ -1,0 +1,27 @@
+.labelClass{
+  border-top-left-radius:7px !important; 
+  border-bottom-left-radius:7px !important; 
+  border-top-right-radius:0px !important; 
+  border-bottom-right-radius:0px !important; 
+}
+.inputClass input{
+  border-color: #001336 !important;
+  border-top-left-radius:0px !important; 
+  border-bottom-left-radius:0px !important; 
+  border-top-right-radius:7px !important; 
+  border-bottom-right-radius:7px !important; 
+}
+.inputClass input:focus{
+  box-shadow: 1px 1px #001336 !important;
+}
+.label{
+  color: white !important;
+  background-color: #001336 !important;
+}
+.ui.left.corner.labeled.input.formss {
+  width: 100% !important;
+}
+
+.ui.input.inputClass {
+  width: calc(100% - 85px)
+}

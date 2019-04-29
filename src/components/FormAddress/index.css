@@ -1,0 +1,30 @@
+.formAddress{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.formInput {
+  padding: 5px;
+  width: 100%;
+}
+.div-formAddress{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media screen and (max-width: 1099px) {
+  .formAddress{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .formInput {
+    padding: 5px;
+    width: 100% !important;
+  }
+}
