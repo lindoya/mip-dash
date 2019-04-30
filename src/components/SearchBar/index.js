@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
 import './index.css'
-import { Card, Search, Grid, Icon } from 'semantic-ui-react'
+import { Card, Search, Grid } from 'semantic-ui-react'
 import ButtonDefault from '../Button'
 
 const source = _.times(5, () => ({

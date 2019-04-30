@@ -1,10 +1,16 @@
 .div-search{
+  display: flex;
+  justify-content: center;
 }
 .card-search{
+  display: flex;
+  align-items: center;
   padding: 20px !important;
   width: 800px !important;
 }
 .ui.input>input {
+  display: flex;
+  justify-content: center;
   border-radius: 7px !important;
   width: 600px !important;
 }

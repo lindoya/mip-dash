@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card } from 'semantic-ui-react'
 import './index.css'
+import SearchBar from '../SearchBar';
 import FormContact from '../FormContact';
 import FormAddress from '../FormAddress';
 import FormChangePassword from '../FormChangePassword';
@@ -10,6 +11,9 @@ class CardDefault extends Component {
   render() {
     return (
       <div>
+        <Card className='cardDefault'>
+          <SearchBar />
+        </Card>
         <Card className='cardDefault'>
           <FormChangePassword />
         </Card>
