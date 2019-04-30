@@ -1,8 +1,4 @@
 import React, { Component } from 'react'
-
-import { connect } from "react-redux";
-import * as auth from "../store/actions/login";
-
 import LoginContainer from '../containers/Login'
 
 class LoginPage extends Component {
@@ -13,7 +9,4 @@ class LoginPage extends Component {
   }
 }
 
-export default connect(
-  null,
-  auth
-)(LoginPage);
+export default LoginPage
