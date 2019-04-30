@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import SideMenu from './containers/SideMenu'
 import './App.css';
-import SearchBar from './components/SearchBar'
+import CardDefault from './components/Card'
+
 
 class App extends Component {
-
-
   render() {
     return (
       <div className="App">
-       <SideMenu username='teste' active='Monitoramento'/>
+        <SideMenu username='Guilherme' active='Monitoramento'/>
+      <CardDefault/>
       </div>
     );
   }

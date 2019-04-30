@@ -1,0 +1,17 @@
+.formAddress{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.formInput {
+  padding: 5px;
+  width: 100%;
+}
+.div-formAddress{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}

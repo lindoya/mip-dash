@@ -19,6 +19,7 @@
 .DivItem {
   display: flex;
   align-content: flex-start;
+  font-size: 15px;
 }
 
 .DivItem i{

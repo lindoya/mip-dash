@@ -1,0 +1,7 @@
+.cardDefault{
+  margin: 10px 30px 10px 188px !important;
+  width: 85% !important;
+  height: 45% !important;
+  display: flex;
+  justify-content: center;
+}
