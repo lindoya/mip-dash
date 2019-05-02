@@ -1,10 +1,25 @@
 .buttonDefault:hover{
   margin-top: 15px !important;
-  background-color: #002A76 !important;
-  color: #e8e8e8 !important;
+  background-color:#ffffff !important;
+  color: #000816 !important;
+  font-weight: bold;
+  border: 1px solid #000816 !important;
+  transition: all 0.3s;
 }
 .buttonDefault{
   margin-top: 15px !important;
-  background-color: #e8e8e8 !important;
-  color: #002059 !important;
+  background-color: #001336 !important;
+  color: #ffffff !important;
+  border-radius: 5px !important;
+  border: 1px solid #000816 !important;
+  box-shadow: #000816 1px 2px 1px 0 !important;
+}
+
+.buttonDefault:active{
+  margin-top: 15px !important;
+  background-color: #001336 !important;
+  color: #ffffff !important;
+  border-radius: 5px !important;
+  border: 1px solid #000816 !important;
+  box-shadow: #000816 0px 0px 0px 0 !important;
 }
