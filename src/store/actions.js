@@ -1,6 +1,10 @@
 export default {
   LOGIN: {
-    CHANGE_VALUE: 'CHANGE_VALUE',
-    AUTH:'AUTH',
+    CHANGE_VALUE: 'LOGIN_CHANGE_VALUE',
+    AUTH:'LOGIN_AUTH',
   },
+
+  SEARCHBAR: {
+    CHANGE_SEARCHBAR: 'CHANGE_SEARCHBAR',
+  }
 }
