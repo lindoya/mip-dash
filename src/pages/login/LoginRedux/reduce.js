@@ -1,5 +1,6 @@
 import actions from '../../../store/actions'
 
+
 const INICIAL_STATE_LOGIN ={
   username: '',
   password: '',
@@ -37,7 +38,6 @@ export function auth(state = INICIAL_STATE_AUTH, action) {
             ...auth,
             ...action.payload.data,
           }
-          window.location = '/logged';
         }
       }
 

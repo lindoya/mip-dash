@@ -10,8 +10,8 @@ import { changeValue, onSubmit } from '../LoginRedux/action'
 
 class Login extends Component {
 
-  onSubmit = () => {
-    this.props.onSubmit(this.props.value)
+  onSubmit = async() => {
+    await this.props.onSubmit(this.props.value)
   }
 
   render() {
@@ -79,7 +79,7 @@ function mapDispacthToProps(dispach) {
 
 function mapStateToProps (state) {
   return {
-    value: state.login
+    value: state.login,
   }
 }
 

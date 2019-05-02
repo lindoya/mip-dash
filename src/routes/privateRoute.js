@@ -2,20 +2,16 @@ import React, { Component } from "react";
 import { Route, Redirect } from 'react-router-dom'
 
 import { connect } from 'react-redux'
+import uuidValidate from 'uuid-validate'
 
 class PrivateRoute extends Component {
+
   render() {
-    return (
-      <Route
-        {...this.props} render={props => (
-          this.props.auth.token ? (
-            <Component {...props} />
-          ) : (
-              <Redirect to={{ pathname: '/', state: { from: props.location } }} />
-            )
-        )}
-      />
-    )
+    if (uuidValidate(this.props.auth.token)){
+      return <Route component={this.props.component} />
+    }else{
+      return <Redirect to='/' />
+    }
   }
 }
 
