@@ -10,7 +10,7 @@ class Login extends Component {
   render() {
     return (
       <div className='Login'>
-        <img src = "realponto.jpg"/>
+        <img src="realponto.jpg" />
         <Form>
           <div className='form'>
             <Input labelPosition='left corner' type='text'>
@@ -25,7 +25,7 @@ class Login extends Component {
             </Input>
           </div>
         </Form>
-        <ButtonDefault className='button' name = 'Login'/>
+        <ButtonDefault className='button' name='Login' />
       </div>
     )
   }

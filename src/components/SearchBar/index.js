@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
 import './index.css'
-import { Card, Search, Grid, Icon } from 'semantic-ui-react'
+import { Card, Search, Grid } from 'semantic-ui-react'
 import ButtonDefault from '../Button'
+import SearchCard from '../SearchCard';
 
 const source = _.times(5, () => ({
   title: "teste",
@@ -12,8 +13,19 @@ const source = _.times(5, () => ({
 
 
 class SearchBar extends Component {
+
+  state = {
+    changeSearchBar: false
+  }
+
   componentWillMount() {
     this.resetComponent()
+  }
+
+  changeSearch = () => {
+    this.setState({
+      changeSearchBar: true
+    })
   }
 
   resetComponent = () => this.setState({ isLoading: false, results: [], value: '' })
@@ -38,14 +50,14 @@ class SearchBar extends Component {
 
   render() {
     const { isLoading, value, results } = this.state
-
+    if(this.state.changeSearchBar === false){
     return (
-      <div className = "div-search">
-        <Card className = "card-search">
-          <Grid className= 'teste2'>
+      <div className="div-search">
+        <Card className="card-search">
+          <Grid className='teste2'>
             <Grid.Column width={6}>
               <Search
-                size = 'large'
+                size='large'
                 loading={isLoading}
                 onResultSelect={this.handleResultSelect}
                 onSearchChange={_.debounce(this.handleSearchChange, 500, { leading: true })}
@@ -55,12 +67,17 @@ class SearchBar extends Component {
               />
             </Grid.Column>
             <div>
-              <ButtonDefault name = 'Advanced'/>
+              <ButtonDefault name='Avançado' click={this.changeSearch}/>
             </div>
           </Grid>
         </Card>
       </div>
     )
+    }else{
+      return(
+      <SearchCard/>
+      )
+    }
   }
 }
 

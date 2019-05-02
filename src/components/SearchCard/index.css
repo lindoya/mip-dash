@@ -1,0 +1,40 @@
+.div-searchCard{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  justify-content: space-around;
+  
+}
+.div-buttonSearch{
+ display: flex;
+ width: 100%;
+ margin-bottom: 20px;
+ justify-content: space-between;
+}
+.div-mainSearch{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+}
+.div-maior{
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  justify-content: space-between;
+}
+.div-buttonsAdd{
+  width: 100%;
+  height: auto;
+}
+.div-menor{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.div-buttons{
+  display: flex;
+  justify-content: space-around;
+}

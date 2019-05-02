@@ -4,13 +4,14 @@ import { Input, Label } from 'semantic-ui-react'
 
 
 class InputDefault extends Component {
-  size = this.props.size || {width:'85px'}
+  sizeLabel = this.props.sizeLabel || { width: '85px' }
+  sizeInput = this.props.sizeInput || { width: 'calc(100% - 85px)' }
   render() {
     return (
-        <Input labelPosition='left corner' className='formss'>
-          <Label style={this.size} className='labelClass'>{this.props.label}</Label>
-          <Input className='inputClass' type='text' placeholder={this.props.input}/>
-        </Input>
+      <Input labelPosition='left corner' className='formss'>
+        <Label style={this.sizeLabel} className='labelClass'>{this.props.label}</Label>
+        <Input style={this.sizeInput} className='inputClass' type='text' placeholder={this.props.input} />
+      </Input>
     )
   }
 }
