@@ -6,11 +6,15 @@ import FormContact from '../FormContact';
 import FormAddress from '../FormAddress';
 import FormChangePassword from '../FormChangePassword';
 import FormChangeNameOrEmail from '../FormChangeNameOrEmail'
+import SearchCard from '../SearchCard';
 
 class CardDefault extends Component {
   render() {
     return (
       <div>
+        <Card className='cardDefault'>
+          <SearchCard />
+        </Card>
         <Card className='cardDefault'>
           <SearchBar />
         </Card>

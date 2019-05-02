@@ -8,8 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SideMenu username='Guilherme' active='Monitoramento'/>
-      <CardDefault/>
+        <SideMenu username='Guilherme' active='Monitoramento' />
+        <CardDefault />
       </div>
     );
   }

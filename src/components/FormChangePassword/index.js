@@ -10,17 +10,17 @@ class FormChangePassword extends Component {
         <div className='div-formAddress'>
           <div className='formAddress'>
             <div className='formInput' style={{ width: '50%' }}>
-              <InputDefault  size={{ width: '110px' }} label='Senha Atual' input='Coloque sua antiga senha' />
+              <InputDefault sizeLabel={{ width: '110px' }} label='Senha Atual' input='Coloque sua antiga senha' />
             </div>
           </div>
           <div className='formAddress'>
             <div className='formInput' style={{ width: '50%' }}>
-              <InputDefault size={{ width: '110px' }} label='Nova Senha' input='Coloque sua nova senha' />
+              <InputDefault sizeLabel={{ width: '110px' }} label='Nova Senha' input='Coloque sua nova senha' />
             </div>
           </div>
           <div className='formAddress'>
             <div className='formInput' style={{ width: '50%' }}>
-              <InputDefault  size={{ width: '110px' }} label='Confirmar' input='Confirme sua nova senha' />
+              <InputDefault sizeLabel={{ width: '110px' }} label='Confirmar' input='Confirme sua nova senha' />
             </div>
           </div>
         </div>

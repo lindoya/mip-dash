@@ -18,3 +18,25 @@
   display: flex !important;
   justify-content: space-between !important;
 }
+.button-modal{
+  margin-top: 15px !important;
+  background-color: #e8e8e8 !important;
+  color: #002059 !important;
+}
+.button-modal:hover{
+  margin-top: 15px !important;
+  background-color: #002A76 !important;
+  color: #e8e8e8 !important;
+}
+.div-modal{
+  width: 50%;
+  flex-wrap: wrap;
+  height: 110px;
+  margin: 10px 20px 10px 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.checkbox{
+  margin: 2px;
+}

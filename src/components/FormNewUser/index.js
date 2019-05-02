@@ -7,18 +7,18 @@ import InputDefault from '../Input'
 class FormNewUser extends Component {
   render() {
     return (
-      <div className = 'FormNewUser'>
+      <div className='FormNewUser'>
         <Form>
           <div className='form'>
-            <InputDefault label='Nome' input='nome completo'/>
+            <InputDefault label='Nome' input='nome completo' />
           </div>
           <div className='form'>
-            <InputDefault label='Email' input='email@email.com'/>
+            <InputDefault label='Email' input='email@email.com' />
           </div>
           <div className='form'>
-            <InputDefault label='Username' input='username'/>
+            <InputDefault label='Username' input='username' />
           </div>
-          <ButtonDefault className = 'buttonNewUSer' type = 'submit' name = 'Salvar'/>
+          <ButtonDefault className='buttonNewUSer' type='submit' name='Salvar' />
         </Form>
       </div>
     )
