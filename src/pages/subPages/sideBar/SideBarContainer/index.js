@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { Icon, Menu, Sidebar } from 'semantic-ui-react'
 import { bindActionCreators } from 'redux'
 import { changeActive } from '../sideBarRedux/action'
+import { Redirect } from 'react-router-dom'
 
 
 class SideBarContainer extends Component {
@@ -22,7 +23,7 @@ class SideBarContainer extends Component {
           visible
           vertical >
 
-          <Menu.Item 
+          <Menu.Item
             as='a'
             onClick={() => this.props.changeActive('User')}
             active={active === 'User'}>
@@ -33,36 +34,17 @@ class SideBarContainer extends Component {
             </div>
           </Menu.Item>
 
-          <Menu.Item 
+          <Menu.Item
             as='a'
-            onClick={() => this.props.changeActive('Monitoramento')}
-            active={active === 'Monitoramento'} >
-            
+            onClick={() => {
+              this.props.changeActive('Dash')
+              redirect('/logged/dash')
+            }}
+            active={active === 'Dash'} >
+
             <div className='DivItem'>
               <Icon name='line graph' />
               Monitoramento
-            </div>
-          </Menu.Item>
-
-          <Menu.Item
-            as='a'
-            onClick={() => this.props.changeActive('PingMonitor')}
-            active={active === 'PingMonitor'} >
-
-            <div className='DivItem'>
-              <Icon name='tv' />
-              Ping Monitor
-            </div>
-          </Menu.Item>
-
-          <Menu.Item 
-            as='a' 
-            active={active === 'Client'}
-            onClick={() => this.props.changeActive('Client')} >
-
-            <div className='DivItem'>
-              <Icon name='address card outline' />
-              Clientes
             </div>
           </Menu.Item>
 
@@ -79,6 +61,20 @@ class SideBarContainer extends Component {
 
           <Menu.Item
             as='a'
+            active={active === 'Client'}
+            onClick={() => {
+              this.props.changeActive('Client')
+              redirect('/logged/client')
+            }} >
+
+            <div className='DivItem'>
+              <Icon name='address card outline' />
+              Clientes
+            </div>
+          </Menu.Item>
+
+          <Menu.Item
+            as='a'
             onClick={() => this.props.changeActive('Contract')}
             active={active === 'Contract'} >
 
@@ -88,49 +84,88 @@ class SideBarContainer extends Component {
             </div>
           </Menu.Item>
 
-          <Menu.Item as='a'>
+          <Menu.Item
+            as='a'
+            onClick={() => this.props.changeActive('PingMonitor')}
+            active={active === 'PingMonitor'} >
+
             <div className='DivItem'>
-              <Icon name='boxes' />
-              Estoque
-        </div>
+              <Icon name='tv' />
+              Ping Monitor
+            </div>
           </Menu.Item>
 
-          <Menu.Item as='a'>
-            <div className='DivItem'>
-              <Icon name='external alternate' />
-              Empréstimos
-        </div>
-          </Menu.Item>
+          <Menu.Item
+          as='a'
+          onClick={() => this.props.changeActive('Módulos')}
+          active={active === 'Módulos'} >
 
-          <Menu.Item as='a'>
-            <div className='DivItem'>
-              <Icon name='suitcase' />
-              Produtos
-        </div>
-          </Menu.Item>
-
-          <Menu.Item as='a'>
-            <div className='DivItem'>
-              <Icon name='users' />
-              Funcionarios
-        </div>
-          </Menu.Item>
-
-          <Menu.Item as='a'>
             <div className='DivItem'>
               <Icon name='money' />
               Módulos
         </div>
           </Menu.Item>
 
-          <Menu.Item as='a'>
+          <Menu.Item 
+          as='a'
+          onClick={() => this.props.changeActive('Produtos')}
+          active={active === 'Produtos'} >
+
+            <div className='DivItem'>
+              <Icon name='suitcase' />
+              Produtos
+        </div>
+          </Menu.Item>
+
+          <Menu.Item 
+            as='a'
+            onClick={() => this.props.changeActive('Empréstimos')}
+            active={active === 'Empréstimos'} >
+
+            <div className='DivItem'>
+              <Icon name='external alternate' />
+              Empréstimos
+        </div>
+          </Menu.Item>
+
+          <Menu.Item
+            as='a'
+            onClick={() => this.props.changeActive('Estoque')}
+            active={active === 'Estoque'} >
+
+            <div className='DivItem'>
+              <Icon name='boxes' />
+              Estoque
+        </div>
+          </Menu.Item>
+
+          <Menu.Item 
+          as='a'
+          onClick={() => this.props.changeActive('Laboratório')}
+          active={active === 'Laboratório'} >
+
             <div className='DivItem'>
               <Icon name='money' />
               Laboratório
         </div>
           </Menu.Item>
 
-          <Menu.Item as='a'>
+          <Menu.Item 
+          as='a'
+          onClick={() => this.props.changeActive('Funcionarios')}
+          active={active === 'Funcionarios'} >
+
+            <div className='DivItem'>
+              <Icon name='users' />
+              Funcionarios
+        </div>
+          </Menu.Item>
+
+          <Menu.Item 
+           as='a'
+           onClick={() => this.props.changeActive('Historico')}
+           active={active === 'Historico'} >
+
             <div className='DivItem'>
               <Icon name='money' />
               Historico
@@ -143,15 +178,21 @@ class SideBarContainer extends Component {
   }
 }
 
-function mapDispacthToProps(dispach) {
-  return bindActionCreators ({ changeActive }, dispach)
+function redirect (url) {
+  return(
+    <Redirect to={url}/>
+  )
 }
 
-function mapStateToProps (state) {
+function mapDispacthToProps(dispach) {
+  return bindActionCreators({ changeActive }, dispach)
+}
+
+function mapStateToProps(state) {
   return {
     active: state.sideBar.active,
     username: state.auth.username,
   }
 }
 
-export default connect (mapStateToProps, mapDispacthToProps)(SideBarContainer)
+export default connect(mapStateToProps, mapDispacthToProps)(SideBarContainer)

@@ -7,5 +7,4 @@ export default {
     CHANGE_ACTIVE: 'SIDE_BAR_CHANGE_ACTIVE',
     NAVIGATE: 'SIDE_BAR_NAVIGATE',
   },
-  NAVIGATE: 'NAVIGATE'
 }
