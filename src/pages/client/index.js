@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-class Monitoramento extends Component{
+class Client extends Component{
   render() {
     return(
       <div>
         
-        <h1>MONITORAMENTO</h1>
+        <h1>aSADASDAsdsadsadsadsadsasdsasdadassdasdasdaClient</h1>
       </div>
     )
   }
@@ -20,4 +20,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect (mapStateToProps)(Monitoramento)
+export default connect (mapStateToProps)(Client)
