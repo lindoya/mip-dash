@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom'
+import { Route, Switch, HashRouter, Redirect } from 'react-router-dom'
 
 import PrivateRoute from './privateRoute'
 
@@ -7,13 +7,13 @@ import LoginPage from '../pages/login'
 
 const Routes = () => (
 
-  <BrowserRouter >
+  <HashRouter >
     <Switch>
       <Route exact path='/login' component={LoginPage} />
       <PrivateRoute path='/logged' />
       <Redirect to='/login' />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 )
 
 export default Routes

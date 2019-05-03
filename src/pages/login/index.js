@@ -16,7 +16,7 @@ class LoginPage extends Component {
     if (this.hasAuth(this.props)){
       if (this.hasToken(this.props.auth)){
         if(uuidValidate(this.props.auth.token)){
-          return <Redirect to='/logged' />
+          return <Redirect to='/logged/dash' />
         }
       }  
     }

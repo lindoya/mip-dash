@@ -4,20 +4,19 @@ import { Route, Redirect, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import uuidValidate from 'uuid-validate'
 
-import SideBarPage from '../pages/subPages/sideBar'
+import Dash from './monitoramento'
+import Client from './client'
 
-import PagesRoute from '../pages'
-
-class PrivateRoute extends Component {
+class PagesRoute extends Component {
 
   render() {
     console.log('motherfoqyue')
     if (uuidValidate(this.props.auth.token)){
       return (
         <div>
-          <SideBarPage />
           <Switch>
-            <Route path='/logged' component={PagesRoute}/>
+            <Route path='/logged/dash' component={Dash}/>
+            <Route path='/logged/client' component={Client}/>
           </Switch>
           
         </div>
@@ -35,4 +34,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect (mapStateToProps)(PrivateRoute)
+export default connect (mapStateToProps)(PagesRoute)
