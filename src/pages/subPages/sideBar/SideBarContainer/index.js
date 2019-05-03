@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import './index.css'
+
+import { connect } from 'react-redux'
 import { Icon, Menu, Sidebar } from 'semantic-ui-react'
 
 
-class SideMenu extends Component {
+class SideBarContainer extends Component {
   render() {
     const { username, active } = this.props
 
+    console.log(active)
     return (
       <div>
         <Sidebar
@@ -114,4 +117,15 @@ class SideMenu extends Component {
   }
 }
 
-export default SideMenu
+// function mapDispacthToProps(dispach) {
+//   return bindActionCreators ({ changeValue, onSubmit }, dispach)
+// }
+
+function mapStateToProps (state) {
+  return {
+    active: state.sideBar.active,
+    username: state.auth.username,
+  }
+}
+
+export default connect (mapStateToProps)(SideBarContainer)
