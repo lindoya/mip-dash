@@ -30,7 +30,6 @@ class PagesRoute extends Component {
 function mapStateToProps (state) {
   return {
     auth: state.auth,
-    page: state.navigate.page
   }
 }
 
