@@ -12,7 +12,7 @@ class PrivateRoute extends Component {
       return (
         <div>
           <SideBarPage />
-          <Route component={this.props.component} />
+          <Route component={this.props.page} />
         </div>
         ) 
     }else{
@@ -23,7 +23,8 @@ class PrivateRoute extends Component {
 
 function mapStateToProps (state) {
   return {
-    auth: state.auth
+    auth: state.auth,
+    page: state.navigate.page
   }
 }
 
