@@ -3,6 +3,8 @@ import './index.css'
 
 import { connect } from 'react-redux'
 import { Icon, Menu, Sidebar } from 'semantic-ui-react'
+import { bindActionCreators } from 'redux'
+import { changeActive } from '../sideBarRedux/action'
 
 
 class SideBarContainer extends Component {
@@ -20,46 +22,70 @@ class SideBarContainer extends Component {
           visible
           vertical >
 
-          <Menu.Item as='a' active={active === 'User'}>
+          <Menu.Item 
+            as='a'
+            onClick={() => this.props.changeActive('User')}
+            active={active === 'User'}>
+
             <div className='DivItem'>
               <Icon name='user outline' />
               {username}
             </div>
           </Menu.Item>
 
-          <Menu.Item as='a' active={active === 'Monitoramento'} >
+          <Menu.Item 
+            as='a'
+            onClick={() => this.props.changeActive('Monitoramento')}
+            active={active === 'Monitoramento'} >
+            
             <div className='DivItem'>
               <Icon name='line graph' />
               Monitoramento
-        </div>
+            </div>
           </Menu.Item>
 
-          <Menu.Item as='a'>
+          <Menu.Item
+            as='a'
+            onClick={() => this.props.changeActive('PingMonitor')}
+            active={active === 'PingMonitor'} >
+
             <div className='DivItem'>
               <Icon name='tv' />
               Ping Monitor
-        </div>
+            </div>
           </Menu.Item>
 
-          <Menu.Item as='a'>
+          <Menu.Item 
+            as='a' 
+            active={active === 'Client'}
+            onClick={() => this.props.changeActive('Client')} >
+
             <div className='DivItem'>
               <Icon name='address card outline' />
               Clientes
-        </div>
+            </div>
           </Menu.Item>
 
-          <Menu.Item as='a'>
+          <Menu.Item
+            as='a'
+            onClick={() => this.props.changeActive('Visit')}
+            active={active === 'Visit'} >
+
             <div className='DivItem'>
               <Icon name='car' />
               Visitas
-        </div>
+            </div>
           </Menu.Item>
 
-          <Menu.Item as='a'>
+          <Menu.Item
+            as='a'
+            onClick={() => this.props.changeActive('Contract')}
+            active={active === 'Contract'} >
+
             <div className='DivItem'>
               <Icon name='handshake outline' />
               Contratos
-        </div>
+            </div>
           </Menu.Item>
 
           <Menu.Item as='a'>
@@ -117,9 +143,9 @@ class SideBarContainer extends Component {
   }
 }
 
-// function mapDispacthToProps(dispach) {
-//   return bindActionCreators ({ changeValue, onSubmit }, dispach)
-// }
+function mapDispacthToProps(dispach) {
+  return bindActionCreators ({ changeActive }, dispach)
+}
 
 function mapStateToProps (state) {
   return {
@@ -128,4 +154,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect (mapStateToProps)(SideBarContainer)
+export default connect (mapStateToProps, mapDispacthToProps)(SideBarContainer)
