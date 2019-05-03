@@ -1,5 +1,6 @@
 .SideMenu {
   background-color: #001336 !important;
+  width: 170px !important;
 }
 
 .SideMenu a:hover{

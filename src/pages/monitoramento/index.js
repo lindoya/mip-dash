@@ -5,7 +5,6 @@ class Monitoramento extends Component{
   render() {
     return(
       <div>
-        
         <h1>MONITORAMENTO</h1>
       </div>
     )
