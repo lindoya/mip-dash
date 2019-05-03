@@ -7,15 +7,18 @@ import uuidValidate from 'uuid-validate'
 import Dash from './monitoramento'
 import Client from './client'
 
+
 class PagesRoute extends Component {
 
   render() {
-    console.log('motherfoqyue')
+
     if (uuidValidate(this.props.auth.token)){
       return (
         <div>
           <Switch>
-            <Route path='/logged/dash' component={Dash}/>
+            <Route path='/logged/dash' component={Dash}>
+              {    console.log(this.props.match)}
+            </Route>
             <Route path='/logged/client' component={Client}/>
           </Switch>
           

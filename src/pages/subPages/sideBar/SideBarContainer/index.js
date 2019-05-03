@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { Icon, Menu, Sidebar } from 'semantic-ui-react'
 import { bindActionCreators } from 'redux'
 import { changeActive } from '../sideBarRedux/action'
+import { Redirect } from 'react-router-dom'
 
 
 class SideBarContainer extends Component {
@@ -35,8 +36,11 @@ class SideBarContainer extends Component {
 
           <Menu.Item
             as='a'
-            onClick={() => this.props.changeActive('Monitoramento')}
-            active={active === 'Monitoramento'} >
+            onClick={() => {
+              this.props.changeActive('Dash')
+              redirect('/logged/dash')
+            }}
+            active={active === 'Dash'} >
 
             <div className='DivItem'>
               <Icon name='line graph' />
@@ -58,7 +62,10 @@ class SideBarContainer extends Component {
           <Menu.Item
             as='a'
             active={active === 'Client'}
-            onClick={() => this.props.changeActive('Client')} >
+            onClick={() => {
+              this.props.changeActive('Client')
+              redirect('/logged/client')
+            }} >
 
             <div className='DivItem'>
               <Icon name='address card outline' />
@@ -169,6 +176,12 @@ class SideBarContainer extends Component {
       </div>
     )
   }
+}
+
+function redirect (url) {
+  return(
+    <Redirect to={url}/>
+  )
 }
 
 function mapDispacthToProps(dispach) {
