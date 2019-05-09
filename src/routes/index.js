@@ -7,7 +7,7 @@ import LoginPage from '../pages/login'
 
 const Routes = () => (
 
-  <HashRouter >
+  <HashRouter>
     <Switch>
       <Route exact path='/login' component={LoginPage} />
       <PrivateRoute path='/logged' />

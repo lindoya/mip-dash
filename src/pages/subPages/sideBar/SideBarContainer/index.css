@@ -3,16 +3,16 @@
   width: 170px !important;
 }
 
-.SideMenu a:hover{
+.SideMenu p:hover{
   background-color: #003494 !important;
 }
 
-.SideMenu a.active{
+.SideMenu p.active{
   background-color: #ffffff !important;
   
 }
 
-.SideMenu a.active .DivItem{
+.SideMenu p.active .DivItem{
   color: #001336 !important;
   font-weight: bold;
 }

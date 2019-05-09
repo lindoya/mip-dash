@@ -3,6 +3,7 @@ import './index.css'
 import { Button } from 'semantic-ui-react'
 
 class ButtonDefault extends Component{
+
   render(){
     return(
       <Button className='buttonDefault' onClick={this.props.onClick}>

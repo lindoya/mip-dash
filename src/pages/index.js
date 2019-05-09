@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Redirect, Switch } from 'react-router-dom'
+import './index.css'
 
 import { connect } from 'react-redux'
 import uuidValidate from 'uuid-validate'
@@ -14,11 +15,9 @@ class PagesRoute extends Component {
 
     if (uuidValidate(this.props.auth.token)){
       return (
-        <div>
+        <div className='AQUI'>
           <Switch>
-            <Route path='/logged/dash' component={Dash}>
-              {    console.log(this.props.match)}
-            </Route>
+            <Route path='/logged/dash' component={Dash}/>
             <Route path='/logged/client' component={Client}/>
           </Switch>
           

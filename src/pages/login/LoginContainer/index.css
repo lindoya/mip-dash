@@ -37,12 +37,12 @@
   width: 85px;
 }
 
-.inputClass input{
+.inputClass{
   border-top-left-radius:0px !important; 
   border-bottom-left-radius:0px !important; 
   border-top-right-radius:7px !important; 
   border-bottom-right-radius:7px !important; 
-  width: 215px;
+  width: 215px !important;
 }
 
 .inputClass input:focus{
