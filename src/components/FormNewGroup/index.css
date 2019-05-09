@@ -1,0 +1,18 @@
+.div-newGroup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.card-newGroup{
+  width: 80% !important;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.ui.left.corner.labeled.input.formss {
+  width: auto !important}

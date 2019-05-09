@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { changeActive } from '../subPages/sideBar/sideBarRedux/action'
+import DashClient from './clientContainer/dashContainer'
+import { Switch, Route } from 'react-router-dom'
+import newGroupContainer from './clientContainer/newGroupContainer'
+import newCompanyContainer from './clientContainer/newCompanyContainer'
+
 
 class Client extends Component{
 
@@ -12,8 +17,11 @@ class Client extends Component{
   render() {
     return(
       <div>
-        
-        <h1>aSADASDAsdsadsadsadsadsasdsasdadassdasdasdaClient</h1>
+        <Switch>
+          <Route exact path='/logged/client' component={DashClient}/> 
+          <Route exact path='/logged/client/newGroup' component={newGroupContainer}/> 
+          <Route exact path='/logged/client/newCompany' component={newCompanyContainer}/> 
+        </Switch>
       </div>
     )
   }

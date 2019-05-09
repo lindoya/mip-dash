@@ -1,0 +1,18 @@
+.div-sidaBar{
+  position: fixed !important;
+  width: auto;
+  height: 100%;
+  display: flex;
+}
+
+.div-body{
+  margin-left: 175px;
+  width: 100% !important;
+  display: flex;
+}
+
+.div-main{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}

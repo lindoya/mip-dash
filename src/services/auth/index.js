@@ -1,8 +1,8 @@
 import axios from 'axios'
-//const { API_URL } = process.env
-const API_URL = 'http://localhost:4000'
+import { BACKEND_URL } from '../var'
+
 const authentic = (values) => {
-  return axios.post(`${API_URL}/oapi/login`, values)
+  return axios.post(`${BACKEND_URL}/oapi/login`, values)
 }
 
 

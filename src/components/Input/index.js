@@ -10,7 +10,7 @@ class InputDefault extends Component {
     return (
       <Input labelPosition='left corner' className='formss'>
         <Label style={this.sizeLabel} className='labelClass'>{this.props.label}</Label>
-        <Input style={this.sizeInput} className='inputClass' type='text' placeholder={this.props.input} />
+        <Input style={this.sizeInput} className='classInput' type='text' placeholder={this.props.input} />
       </Input>
     )
   }

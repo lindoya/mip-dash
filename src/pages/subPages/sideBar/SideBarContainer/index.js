@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { Icon, Menu, Sidebar } from 'semantic-ui-react'
 import { bindActionCreators } from 'redux'
 import { changeActive } from '../sideBarRedux/action'
-import { Redirect } from 'react-router-dom'
+import {  Link } from 'react-router-dom'
 
 
 class SideBarContainer extends Component {
@@ -23,154 +23,178 @@ class SideBarContainer extends Component {
           visible
           vertical >
 
-          <Menu.Item
-            as='a'
-            onClick={() => this.props.changeActive('User')}
-            active={active === 'User'}>
+          <Link to='/logged/user'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('User')}
+              active={active === 'User'}>
 
-            <div className='DivItem'>
-              <Icon name='user outline' />
-              {username}
+              <div className='DivItem'>
+                <Icon name='user outline' />
+                {username}
+              </div>
+            </Menu.Item>
+          </Link>
+
+          <Link to='/logged/dash'>
+            <Menu.Item
+              as='p'
+              onClick={() =>
+                this.props.changeActive('Dash')
+              }
+              active={active === 'Dash'} >
+
+              <div className='DivItem'>
+                <Icon name='line graph' />
+                Monitoramento
             </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item
-            as='a'
-            onClick={() => {
-              this.props.changeActive('Dash')
-              redirect('/logged/dash')
-            }}
-            active={active === 'Dash'} >
+          <Link to='/logged/visit'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('Visit')}
+              active={active === 'Visit'} >
 
-            <div className='DivItem'>
-              <Icon name='line graph' />
-              Monitoramento
+              <div className='DivItem'>
+                <Icon name='car' />
+                Visitas
             </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item
-            as='a'
-            onClick={() => this.props.changeActive('Visit')}
-            active={active === 'Visit'} >
+          <Link to='/logged/client'>
+            <Menu.Item
+              as='p'
+              active={active === 'Client'}
+              onClick={() =>
+                this.props.changeActive('Client')
+              } >
 
-            <div className='DivItem'>
-              <Icon name='car' />
-              Visitas
+              <div className='DivItem'>
+                <Icon name='address card outline' />
+                Clientes
             </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item
-            as='a'
-            active={active === 'Client'}
-            onClick={() => {
-              this.props.changeActive('Client')
-              redirect('/logged/client')
-            }} >
+          <Link to='/logged/contract'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('Contract')}
+              active={active === 'Contract'} >
 
-            <div className='DivItem'>
-              <Icon name='address card outline' />
-              Clientes
+              <div className='DivItem'>
+                <Icon name='handshake outline' />
+                Contratos
             </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item
-            as='a'
-            onClick={() => this.props.changeActive('Contract')}
-            active={active === 'Contract'} >
+          <Link to='/logged/movice'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('PingMonitor')}
+              active={active === 'PingMonitor'} >
 
-            <div className='DivItem'>
-              <Icon name='handshake outline' />
-              Contratos
+              <div className='DivItem'>
+                <Icon name='tv' />
+                Ping Monitor
             </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item
-            as='a'
-            onClick={() => this.props.changeActive('PingMonitor')}
-            active={active === 'PingMonitor'} >
+          <Link to='/logged/modrp'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('Módulos')}
+              active={active === 'Módulos'} >
 
-            <div className='DivItem'>
-              <Icon name='tv' />
-              Ping Monitor
+              <div className='DivItem'>
+                <Icon name='money' />
+                Módulos
             </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item
-          as='a'
-          onClick={() => this.props.changeActive('Módulos')}
-          active={active === 'Módulos'} >
+          <Link to='/logged/products'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('Produtos')}
+              active={active === 'Produtos'} >
 
-            <div className='DivItem'>
-              <Icon name='money' />
-              Módulos
+              <div className='DivItem'>
+                <Icon name='suitcase' />
+                Produtos
         </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item 
-          as='a'
-          onClick={() => this.props.changeActive('Produtos')}
-          active={active === 'Produtos'} >
+          <Link to='/logged/loan'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('Empréstimos')}
+              active={active === 'Empréstimos'} >
 
-            <div className='DivItem'>
-              <Icon name='suitcase' />
-              Produtos
+              <div className='DivItem'>
+                <Icon name='external alternate' />
+                Empréstimos
         </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item 
-            as='a'
-            onClick={() => this.props.changeActive('Empréstimos')}
-            active={active === 'Empréstimos'} >
+          <Link to='/logged/stock'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('Estoque')}
+              active={active === 'Estoque'} >
 
-            <div className='DivItem'>
-              <Icon name='external alternate' />
-              Empréstimos
+              <div className='DivItem'>
+                <Icon name='boxes' />
+                Estoque
         </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item
-            as='a'
-            onClick={() => this.props.changeActive('Estoque')}
-            active={active === 'Estoque'} >
+          <Link to='/logged/lab'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('Laboratório')}
+              active={active === 'Laboratório'} >
 
-            <div className='DivItem'>
-              <Icon name='boxes' />
-              Estoque
+              <div className='DivItem'>
+                <Icon name='money' />
+                Laboratório
         </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item 
-          as='a'
-          onClick={() => this.props.changeActive('Laboratório')}
-          active={active === 'Laboratório'} >
+          <Link to='/logged/func'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('Funcionarios')}
+              active={active === 'Funcionarios'} >
 
-            <div className='DivItem'>
-              <Icon name='money' />
-              Laboratório
+              <div className='DivItem'>
+                <Icon name='users' />
+                Funcionarios
         </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
-          <Menu.Item 
-          as='a'
-          onClick={() => this.props.changeActive('Funcionarios')}
-          active={active === 'Funcionarios'} >
+          <Link to='/logged/historic'>
+            <Menu.Item
+              as='p'
+              onClick={() => this.props.changeActive('Historico')}
+              active={active === 'Historico'} >
 
-            <div className='DivItem'>
-              <Icon name='users' />
-              Funcionarios
+              <div className='DivItem'>
+                <Icon name='money' />
+                Historico
         </div>
-          </Menu.Item>
-
-          <Menu.Item 
-           as='a'
-           onClick={() => this.props.changeActive('Historico')}
-           active={active === 'Historico'} >
-
-            <div className='DivItem'>
-              <Icon name='money' />
-              Historico
-        </div>
-          </Menu.Item>
+            </Menu.Item>
+          </Link>
 
         </Sidebar>
       </div>
@@ -178,11 +202,6 @@ class SideBarContainer extends Component {
   }
 }
 
-function redirect (url) {
-  return(
-    <Redirect to={url}/>
-  )
-}
 
 function mapDispacthToProps(dispach) {
   return bindActionCreators({ changeActive }, dispach)

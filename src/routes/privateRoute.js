@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Redirect, Switch } from 'react-router-dom'
+import './index.css'
 
 import { connect } from 'react-redux'
 import uuidValidate from 'uuid-validate'
@@ -11,18 +12,20 @@ import PagesRoute from '../pages'
 class PrivateRoute extends Component {
 
   render() {
-    console.log('motherfoqyue')
-    if (uuidValidate(this.props.auth.token)){
+    if (uuidValidate(this.props.auth.token)) {
       return (
-        <div>
-          <SideBarPage />
-          <Switch>
-            <Route path='/logged' component={PagesRoute}/>
-          </Switch>
-          
+        <div className='div-main'>
+          <div className='div-sideBar'>
+            <SideBarPage />
+          </div>
+          <div className='div-body'>
+            <Switch>
+              <Route path='/logged' component={PagesRoute} />
+            </Switch>
+          </div>
         </div>
-        ) 
-    }else{
+      )
+    } else {
       return <Redirect to='/login' />
     }
   }
