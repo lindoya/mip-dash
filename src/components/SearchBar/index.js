@@ -81,7 +81,6 @@ class SearchBar extends Component {
           
           <Card className="card-search">
             <Grid className='grid'>
-            <div className='div-gridsearch'>
               <Search
                 className='grid-menor'
                 loading={isLoading}
@@ -92,13 +91,12 @@ class SearchBar extends Component {
                 {...this.props}
               />
               <ButtonDefault className='button-sla' name='Avançado' onClick={this.changeSearch} />
-              </div>
+            </Grid>
+          </Card>
           <div className='div-buttonsTool'>
             {this.props.buttons.map(button =>
               <ButtonIcon icon='plus' name={button.name} onClick={() => this.onClickButton(button.url)}/>)}
           </div>
-            </Grid>
-          </Card>
         </div>
       )
     } else {

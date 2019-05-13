@@ -3,6 +3,7 @@ import SearchBar from '../../../../components/SearchBar'
 import './index.css'
 import { Menu, Segment } from 'semantic-ui-react'
 import ListGroup from '../grupoContainer'
+import ListCompany from '../companyContainer'
 
 
 class DashClient extends Component{  
@@ -65,7 +66,7 @@ class DashClient extends Component{
         </Menu>
 
         <Segment attached='bottom'>
-            <h1>COMPANY</h1>
+            <ListCompany/>
         </Segment>
       </div>
       </div>
