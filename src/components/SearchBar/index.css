@@ -5,6 +5,7 @@
 }
 .card-search{
   display: flex;
+  align-items: center;
   padding: 20px 0 20px 0!important;
   width: 100% !important;
 }
@@ -18,12 +19,8 @@ input.prompt{
   width: 100% !important;
 }
 .grid-menor{
-  width: calc(100% - 100px);
+  width: calc(100% - 100px) !important;
   padding: none !important
-}
-.div-gridsearch{
-  display: flex;
-  width: 100%;
 }
 .ui.input {
   width: 100%
@@ -55,10 +52,11 @@ input.prompt{
   margin: 2px;
 }
 .div-buttonsTool{
+  margin: 5px 5px 0 0;
   justify-content: flex-end;
   display: flex;
   height: 40px;
-  width: auto !important;
+  width: 45% !important;
 }
 .div-main{
   display: flex;
