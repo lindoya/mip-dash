@@ -40,3 +40,12 @@ tr:nth-child(even) {
   background-color: white;
   cursor: pointer;
 }
+.grupo{
+  width: 32% !important;
+}
+.desc{
+  width: 53% !important
+}
+.qtd{
+  width: 15% !important
+}
