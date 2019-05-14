@@ -169,7 +169,7 @@ function mapDispacthToProps(dispach) {
 
 function mapStateToProps (state) {
   return {
-    companyGroupList: state.client.companyGroup.getAllCompanyGroup,
+    companyGroupList: state.client,
   }
 }
 

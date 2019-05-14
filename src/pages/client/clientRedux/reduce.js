@@ -1,10 +1,15 @@
 import actions from '../../../store/actions'
 
-const INICIAL_STATE ={
-  page: 1,
-  show: '0',
-  count: '0',
-  rows: [],
+const INICIAL_STATE = {
+  
+  companyGroup: {
+    getAll: {
+      page: 1,
+      show: '0',
+      count: '0',
+      rows: [],
+    }
+  }
 }
 
 
@@ -16,7 +21,11 @@ export function client(state = INICIAL_STATE, action) {
       if (action.payload.statusCode === 200){
         return{
           ...state,
-          ...action.payload.body,
+          companyGroup:{
+            getAll: {
+              ...action.payload.body,
+            }
+          }
         }
       }else{
         return state
