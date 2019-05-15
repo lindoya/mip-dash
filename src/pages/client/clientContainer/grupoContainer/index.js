@@ -21,13 +21,15 @@ class ListGroup extends Component {
   }
 
   componentDidMount = () => {
-    getAllCompanyGroup()
-    console.log(this.props.companyGroupList)
+    this.props.getAllCompanyGroup()
   }
 
   render() {
+
+    const groupList = this.props.companyGroupList.rows
+
     return (
-      <Table singleLine>
+      <Table selectable color='#001336'>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell className='grupo' width='32%'>
@@ -66,79 +68,18 @@ class ListGroup extends Component {
         </Table.Header>
 
         <Table.Body>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
+
+          {groupList.map(row => (
+            <Table.Row > 
+            <Table.Cell>{row.groupName}</Table.Cell>
+            <Table.Cell>{row.description}</Table.Cell>
+            <Table.Cell>{row.createdAt}</Table.Cell>
+            <Table.Cell>{row.qntComp}</Table.Cell>
           </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Grupo NK</Table.Cell>
-            <Table.Cell>Grupo monstro</Table.Cell>
-            <Table.Cell>12/12/1212</Table.Cell>
-            <Table.Cell>12</Table.Cell>
-          </Table.Row>
+          ))}
+
         </Table.Body>
+
 
         <Table.Footer>
           <Table.Row>
@@ -169,7 +110,7 @@ function mapDispacthToProps(dispach) {
 
 function mapStateToProps (state) {
   return {
-    companyGroupList: state.client,
+    companyGroupList: state.client.companyGroup.getAll,
   }
 }
 

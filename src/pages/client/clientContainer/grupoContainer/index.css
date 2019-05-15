@@ -4,15 +4,20 @@ table {
   width: 100%;
 }
 
+/* .ui.table{
+  border-top: .2em solid #001336;
+} */
+
 td, th {
   border: 1px solid #ffffff;
   text-align: left;
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+.lineClass :hover{
+  background-color: yellow !important;
 }
+
 .buttonGrupo{
   text-align: start;
   width: 100%;
