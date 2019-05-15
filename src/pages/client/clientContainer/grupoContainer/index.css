@@ -3,21 +3,18 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
-/* .ui.table{
+.ui.table{
   border-top: .2em solid #001336;
-} */
-
+}
 td, th {
   border: 1px solid #ffffff;
   text-align: left;
   padding: 8px;
 }
-
-.lineClass :hover{
-  background-color: yellow !important;
+.tr-group:hover{
+  background-color: #001336 !important;
+  color: white
 }
-
 .buttonGrupo{
   text-align: start;
   width: 100%;
@@ -45,12 +42,18 @@ td, th {
   background-color: white;
   cursor: pointer;
 }
+.table-row{
+  width: 100% !important
+}
 .grupo{
-  width: 32% !important;
+  width: 17% !important;
 }
 .desc{
-  width: 53% !important
+  width: 33% !important
+}
+.criado{
+  width: 15% !important;
 }
 .qtd{
-  width: 15% !important
+  width: 9% !important
 }

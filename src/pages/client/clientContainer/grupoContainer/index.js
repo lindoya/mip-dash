@@ -29,10 +29,10 @@ class ListGroup extends Component {
     const groupList = this.props.companyGroupList.rows
 
     return (
-      <Table selectable color='#001336'>
+      <Table>
         <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell className='grupo' width='32%'>
+          <Table.Row >
+            <Table.HeaderCell className='grupo'>
               <button icon onClick={() => this.changeStateActive('grupo')} className='buttonEmp'>
                 Grupo
                {this.state.name === 'grupo' ? (
@@ -40,42 +40,41 @@ class ListGroup extends Component {
                 ) : null}
               </button>
             </Table.HeaderCell>
-            <Table.HeaderCell className='desc' width='58%'>
-            <button icon onClick={() => this.changeStateActive('descricao')} className='buttonEmp'>
-            Descrição
+            <Table.HeaderCell className='desc'>
+              <button icon onClick={() => this.changeStateActive('descricao')} className='buttonEmp'>
+                Descrição
               {this.state.name === 'descricao' ? (
-                this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
-              ) : null}
-            </button>
+                  this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
+                ) : null}
+              </button>
             </Table.HeaderCell>
-            <Table.HeaderCell className='qtd' width='10%'>
-            <button icon onClick={() => this.changeStateActive('criado')} className='buttonEmp'>
-            Criado em
+            <Table.HeaderCell className='qtd'>
+              <button icon onClick={() => this.changeStateActive('criado')} className='buttonEmp'>
+                Criado em
               {this.state.name === 'criado' ? (
-                this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
-              ) : null}
-            </button>
+                  this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
+                ) : null}
+              </button>
             </Table.HeaderCell>
-            <Table.HeaderCell className='qtd' width='10%'>
-            <button icon onClick={() => this.changeStateActive('qtd')} className='buttonEmp'>
-            Qtd. Emp
+            <Table.HeaderCell className='qtd'>
+              <button icon onClick={() => this.changeStateActive('qtd')} className='buttonEmp'>
+                Qtd. Emp
               {this.state.name === 'qtd' ? (
-                this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
-              ) : null}
-            </button>
+                  this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
+                ) : null}
+              </button>
             </Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 
         <Table.Body>
-
-          {groupList.map(row => (
-            <Table.Row > 
-            <Table.Cell>{row.groupName}</Table.Cell>
-            <Table.Cell>{row.description}</Table.Cell>
-            <Table.Cell>{row.createdAt}</Table.Cell>
-            <Table.Cell>{row.qntComp}</Table.Cell>
-          </Table.Row>
+         {groupList.map(row => (
+            <tr class="tr-group" > 
+            <td class="td-group-grupo">{row.groupName}</td>
+            <td class="td-group-desc">{row.description}</td>
+            <td class="td-group-criado">{row.createdAt}</td>
+            <td class="td-group-qtd">{row.qntComp}</td>
+          </tr>
           ))}
 
         </Table.Body>
@@ -99,16 +98,16 @@ class ListGroup extends Component {
             </Table.HeaderCell>
           </Table.Row>
         </Table.Footer>
-        </Table>
+      </Table>
     )
   }
 }
 
 function mapDispacthToProps(dispach) {
-  return bindActionCreators ({ getAllCompanyGroup }, dispach)
+  return bindActionCreators({ getAllCompanyGroup }, dispach)
 }
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
     companyGroupList: state.client.companyGroup.getAll,
   }
