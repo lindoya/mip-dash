@@ -6,10 +6,11 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { getAllCompanyGroup } from '../../clientRedux/action'
+
 class ListGroup extends Component {
 
   state = {
-    name: 'Grupo',
+    name: 'createdAt',
     direction: false,
   }
 
@@ -17,15 +18,25 @@ class ListGroup extends Component {
     this.setState({
       name: name,
       direction: !this.state.direction
+    }, () => {
+      this.getList()
     })
   }
 
   componentDidMount = () => {
-    this.props.getAllCompanyGroup()
+    this.getList()
+  }
+
+
+  getList = () => {
+    const order = {
+      field: this.state.name,
+      acendent: this.state.direction,
+    }
+    this.props.getAllCompanyGroup({ order })
   }
 
   render() {
-
     const groupList = this.props.companyGroupList.rows
 
     return (
@@ -33,35 +44,32 @@ class ListGroup extends Component {
         <Table.Header>
           <Table.Row >
             <Table.HeaderCell className='grupo'>
-              <button icon onClick={() => this.changeStateActive('grupo')} className='buttonEmp'>
+              <button icon onClick={() => this.changeStateActive('groupName')} className='buttonEmp'>
                 Grupo
-               {this.state.name === 'grupo' ? (
+               {this.state.name === 'groupName' ? (
                   this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
                 ) : null}
               </button>
             </Table.HeaderCell>
             <Table.HeaderCell className='desc'>
-              <button icon onClick={() => this.changeStateActive('descricao')} className='buttonEmp'>
+              <button icon onClick={() => this.changeStateActive('description')} className='buttonEmp'>
                 Descrição
-              {this.state.name === 'descricao' ? (
+              {this.state.name === 'description' ? (
                   this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
                 ) : null}
               </button>
             </Table.HeaderCell>
             <Table.HeaderCell className='qtd'>
-              <button icon onClick={() => this.changeStateActive('criado')} className='buttonEmp'>
+              <button icon onClick={() => this.changeStateActive('createdAt')} className='buttonEmp'>
                 Criado em
-              {this.state.name === 'criado' ? (
+              {this.state.name === 'createdAt' ? (
                   this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
                 ) : null}
               </button>
             </Table.HeaderCell>
             <Table.HeaderCell className='qtd'>
-              <button icon onClick={() => this.changeStateActive('qtd')} className='buttonEmp'>
+              <button icon className='buttonEmp'>
                 Qtd. Emp
-              {this.state.name === 'qtd' ? (
-                  this.state.direction ? <Icon name='sort up' /> : <Icon name='sort down' />
-                ) : null}
               </button>
             </Table.HeaderCell>
           </Table.Row>
