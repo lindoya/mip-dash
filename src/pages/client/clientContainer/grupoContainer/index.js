@@ -11,7 +11,7 @@ class ListGroup extends Component {
 
   state = {
     name: 'createdAt',
-    direction: false,
+    direction: true,
   }
 
   changeStateActive = (name) => {
