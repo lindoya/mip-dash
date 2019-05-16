@@ -27,7 +27,6 @@ class DashClient extends Component{
 
     const { activeItem } = this.state
 
-    if(this.state.activeItem === 'Grupos'){
     return(
       <div className='div-searchBar'>
         <SearchBar buttons={this.buttons} />
@@ -44,34 +43,11 @@ class DashClient extends Component{
         </Menu>
 
         <Segment attached='bottom'>
-          <ListGroup/>
+          {this.state.activeItem === 'Grupos'? <ListGroup/> : <ListCompany/>}
         </Segment>
       </div>
       </div>
     )
-    }else{
-      return(
-        <div className='div-searchBar'>
-        <SearchBar buttons={this.buttons} />
-        <div>
-        <Menu attached='top' tabular>
-          <Menu.Item name='Grupos' active={activeItem === 'Grupos'} onClick={this.handleItemClick} />
-          <Menu.Item
-            name='Empresas'
-            active={activeItem === 'Empresas'}
-            onClick={this.handleItemClick}
-            />
-          <Menu.Menu position='right'>
-          </Menu.Menu>
-        </Menu>
-
-        <Segment attached='bottom'>
-            <ListCompany/>
-        </Segment>
-      </div>
-      </div>
-    )
-    }
   }
 }
 

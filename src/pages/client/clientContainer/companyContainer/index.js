@@ -289,7 +289,7 @@ class ListCompany extends Component {
         <Table.Footer>
           <Table.Row>
             <Table.HeaderCell colSpan='6'>
-              <Menu floated='' pagination>
+              <Menu floated='right' pagination>
                 <Menu.Item as='a' icon>
                   <Icon name='chevron left' />
                 </Menu.Item>

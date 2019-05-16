@@ -3,15 +3,17 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
+.ui.table{
+  border-top: .2em solid #001336;
+}
 td, th {
   border: 1px solid #ffffff;
   text-align: left;
   padding: 8px;
 }
-
-tr:nth-child(even) {
-  background-color: #dddddd;
+.tr-group:hover{
+  background-color: #001336 !important;
+  color: white
 }
 .buttonGrupo{
   text-align: start;
@@ -39,4 +41,19 @@ tr:nth-child(even) {
   outline: none;
   background-color: white;
   cursor: pointer;
+}
+.table-row{
+  width: 100% !important
+}
+.grupo{
+  width: 17% !important;
+}
+.desc{
+  width: 33% !important
+}
+.criado{
+  width: 15% !important;
+}
+.qtd{
+  width: 9% !important
 }
