@@ -1,52 +1,12 @@
-/* table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #ffffff;
-  text-align: left;
-  padding: 8px;
-}
-th{
-  background-color: rgb(216, 212, 212) !important
-}
-
-tr:nth-child(even) {
-  background-color: white;
-}
-
-.buttonEmp{
-  text-align: start;
-  width: 100%;
-  height: 35px;
-  border:none;
-  outline: none;
-  background-color: rgb(216, 212, 212);
-  cursor: pointer;
-}
 .cnpj{
-  width: calc(100% - 84%) !important;
-}
-.nome{
-  width: calc(100% - 76%) !important;
+  width: 15% !important;
 }
 .grupo{
-  width: calc(100% - 77%) !important;
-}
-.cidade{
-  width: 22% !important;
-}
-.qtd{
-  width: 25% !important;
-}
-.devedor{
   width: 20% !important;
 }
-.deve{
-  background-color: rgb(226, 13, 13) !important
+.nome{
+  width: 25% !important;
 }
-td:hover{
-  background-color: rgb(207, 212, 212)
-} */
+.cidade{
+  width: 25% !important;
+}
