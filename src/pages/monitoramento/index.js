@@ -12,7 +12,7 @@ class Monitoramento extends Component{
   render() {
     return(
       <div>
-        <h1>05555555555555555555555555 MONITORAMENTO</h1>
+        <h1>BEM VINDO AO MIP</h1>
       </div>
     )
   }

@@ -42,7 +42,7 @@ class ListGroup extends Component {
     return (
       <Table>
         <Table.Header>
-          <Table.Row >
+          <Table.Row>
             <Table.HeaderCell className='grupo'>
               <button icon onClick={() => this.changeStateActive('groupName')} className='buttonEmp'>
                 Grupo
@@ -68,7 +68,7 @@ class ListGroup extends Component {
               </button>
             </Table.HeaderCell>
             <Table.HeaderCell className='qtd'>
-              <button icon className='buttonEmp'>
+              <button icon className='buttonDesc'>
                 Qtd. Emp
               </button>
             </Table.HeaderCell>

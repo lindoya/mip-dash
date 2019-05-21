@@ -5,9 +5,20 @@
   height: auto;
   width: 100%;
 }
-
+.div-newGroupmenor{
+  height: 250px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.div-inputs{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
 .card-newGroup{
-  width: 80% !important;
+  width: 99% !important;
   height: 500px;
   display: flex;
   justify-content: center;
@@ -15,4 +26,5 @@
 }
 
 .ui.left.corner.labeled.input.formss {
-  width: auto !important}
+  width: auto !important
+}

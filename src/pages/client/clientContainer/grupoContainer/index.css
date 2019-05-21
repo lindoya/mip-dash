@@ -15,32 +15,36 @@ td, th {
   background-color: #001336 !important;
   color: white
 }
-.buttonGrupo{
-  text-align: start;
-  width: 100%;
-  height: 50px;
-  border:none;
-  outline: none;
-  background-color: white;
-  cursor: pointer;
+th{
+  background-color: rgb(237, 237, 238) !important;
+  height: 40px !important;
 }
 .buttonDesc{
   text-align: start;
   width: 100%;
-  height: 50px;
+  height: 30px;
   border:none;
   outline: none;
-  background-color: white;
-  cursor: pointer;
+  background-color: rgb(237, 237, 238);
+}
+.td-group-grupo{
+  font-size: 14px
+}
+.td-group-desc{
+  font-size: 14px
+}
+.td-group-criado{
+  font-size: 14px
 }
 .buttonEmp{
   text-align: start;
   width: 100%;
-  height: 50px;
+  height: 30px;
   border:none;
   outline: none;
-  background-color: white;
+  background-color:rgb(237, 237, 238) ;
   cursor: pointer;
+  font-size: 15px
 }
 .table-row{
   width: 100% !important
