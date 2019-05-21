@@ -1,18 +1,18 @@
-.labelClass{
+.labelDefault{
   text-align: center;
   border-top-left-radius:7px !important; 
   border-bottom-left-radius:7px !important; 
   border-top-right-radius:0px !important; 
   border-bottom-right-radius:0px !important; 
 }
-.inputClass input{
+.inputDefault input{
   border-color: #001336 !important;
   border-top-left-radius:0px !important; 
   border-bottom-left-radius:0px !important; 
   border-top-right-radius:7px !important; 
   border-bottom-right-radius:7px !important; 
 }
-.inputClass input:focus{
+.inputDefault input:focus{
   box-shadow: 1px 1px #001336 !important;
 }
 .label{
@@ -23,6 +23,6 @@
   width: 100% !important;
 }
 
-.ui.input.inputClass {
+.ui.input.inputDefault {
   width: calc(100% - 85px)
 }

@@ -25,9 +25,10 @@ class Login extends Component {
               
               <Input labelPosition='left corner' type='text'>
                 
-                <Label >Username</Label>
+                <Label className='label-semantic'>Username</Label>
                 
-                <Input
+                <Input 
+                  className='input-semantic'
                   name='username'
                   icon='users' 
                   iconPosition='left' 
@@ -45,9 +46,10 @@ class Login extends Component {
 
               <Input labelPosition='left corner'>
 
-                <Label >Password</Label>
+                <Label className='label-semantic' >Password</Label>
 
                 <Input 
+                  className='input-semantic'
                   name='password' 
                   icon='unlock alternate' 
                   iconPosition='left' 

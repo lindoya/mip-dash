@@ -9,8 +9,8 @@ class InputDefault extends Component {
   render() {
     return (
       <Input labelPosition='left corner' className='formss'>
-        <Label style={this.sizeLabel} className='labelClass'>{this.props.label}</Label>
-        <Input style={this.sizeInput} className='classInput' type='text' placeholder={this.props.input} />
+        <Label style={this.sizeLabel} className='labelDefault'>{this.props.label}</Label>
+        <Input style={this.sizeInput} className='inputDefault' type='text' placeholder={this.props.input} />
       </Input>
     )
   }
